@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casio</title>
+    <link rel="stylesheet" href="mycss.css">
+</head>
+<body>
+    <div class="main">
+        <br><br><br>
+        
+        <div class="calculator">
+        
+                <input type="text" name="display"  class="display" id="res" disabled><br>
+                <input type="button" value="AC" onclick="document.getElementById('res').value=''">
+                <input type="button" value="DE" onclick="del()">
+                <input type="button" value="." onclick="document.getElementById('res').value+='.'">
+                <input type="button" value="/" onclick="document.getElementById('res').value+='/'"><br>
+                <input type="button" value="7" onclick="document.getElementById('res').value+='7'">
+                <input type="button" value="8" onclick="document.getElementById('res').value+='8'">
+                <input type="button" value="9" onclick="document.getElementById('res').value+='9'">
+                <input type="button" value="*" onclick="document.getElementById('res').value+='*'"><br>
+                <input type="button" value="4" onclick="document.getElementById('res').value+='4'">
+                <input type="button" value="5" onclick="document.getElementById('res').value+='5'">
+                <input type="button" value="6" onclick="document.getElementById('res').value+='6'">
+                <input type="button" value="-" onclick="document.getElementById('res').value+='-'"><br>
+                <input type="button" value="1" onclick="document.getElementById('res').value+='1'" >
+                <input type="button" value="2" onclick="document.getElementById('res').value+='2'">
+                <input type="button" value="3" onclick="document.getElementById('res').value+='3'">
+                <input type="button" value="+" onclick="document.getElementById('res').value+='+'"><br>
+                <input type="button" value="00" onclick="document.getElementById('res').value+='00'">
+                <input type="button" value="0" onclick="document.getElementById('res').value+='0'">
+                 <input type="button" value="=" id="equal" onclick="equal()">
+
+        </div>
+        
+        <h1>KMS Casio ff-991ex</h1>
+    </div>
+    
+</body>
+<script>
+    var res=document.getElementById('res')
+    function del(){
+        res.value=res.value.slice(0,-1)
+    }
+    function equal()
+    {
+    var data=eval(res.value)
+    res.value=data
+    }
+</script>
+</html>
